@@ -1,6 +1,5 @@
 import mongoose, {Schema, models,  model} from "mongoose";
 
-
 export const Video_DIMENSION = {
     width : 1080,
     height : 1920

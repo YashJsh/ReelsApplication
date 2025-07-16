@@ -13,11 +13,11 @@ if (!cached){
 }
 
 export async function connectToDatabase(){
-    if (cached.conn){
+    if (cached.conn){   // If has connection, then return the connection
         return cached.conn
     };
 
-    if (!cached.promise){
+    if (!cached.promise){ // If it not has promise but it is one the way. 
         cached.promise = mongoose
         .connect(MONGODB_URI)
         .then(()=> mongoose.connection)
